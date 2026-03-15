@@ -93,6 +93,14 @@
     <ClCompile Include="src\ImGuizmo.cpp" />
     <ClCompile Include="src\ImSequencer.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\GraphEditor.h" />
+    <ClInclude Include="src\ImCurveEdit.h" />
+    <ClInclude Include="src\ImGradient.h" />
+    <ClInclude Include="src\ImGuizmo.h" />
+    <ClInclude Include="src\ImSequencer.h" />
+    <ClInclude Include="src\ImZoomSlider.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

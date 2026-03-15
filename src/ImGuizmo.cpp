@@ -320,7 +320,7 @@ namespace IMGUIZMO_NAMESPACE
 
       operator float* () { return m16; }
       operator const float* () const { return m16; }
-      void Translation(float _x, float _y, float _z) { this->Translation(makeVect(_x, _y, _z )); }
+      void Translation(float _x, float _y, float _z) { this->Translation(makeVect(_x, _y, _z)); }
 
       void Translation(const vec_t& vt)
       {
@@ -2435,18 +2435,18 @@ namespace IMGUIZMO_NAMESPACE
 
       // switched z and y axis to real world coordinate system 
       scale[0] = mat.v.right.Length();
-      scale[1] = mat.v.dir.Length();
-      scale[2] = mat.v.up.Length();
+      scale[1] = mat.v.up.Length();
+      scale[2] = mat.v.dir.Length();
 
       mat.OrthoNormalize();
 
       rotation[0] = RAD2DEG * atan2f(mat.m[1][2], mat.m[2][2]);
-      rotation[1] = RAD2DEG * atan2f(mat.m[0][1], mat.m[0][0]);
-      rotation[2] = RAD2DEG * atan2f(-mat.m[0][2], sqrtf(mat.m[1][2] * mat.m[1][2] + mat.m[2][2] * mat.m[2][2]));
+      rotation[1] = RAD2DEG * atan2f(-mat.m[0][2], sqrtf(mat.m[1][2] * mat.m[1][2] + mat.m[2][2] * mat.m[2][2]));
+      rotation[2] = RAD2DEG * atan2f(mat.m[0][1], mat.m[0][0]);
 
       translation[0] = mat.v.position.x;
-      translation[1] = mat.v.position.z;
-      translation[2] = mat.v.position.y;
+      translation[1] = mat.v.position.y;
+      translation[2] = mat.v.position.z;
    }
 
    void RecomposeMatrixFromComponents(const float* translation, const float* rotation, const float* scale, float* matrix)
